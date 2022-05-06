@@ -73,6 +73,7 @@ class MainFragment : Fragment() {
         }
 
         forcaWsViewModel.niveisMld.observe(requireActivity()) { niveis ->
+
             listaIdentificadoresPalavrasJaEscolhidas.clear()
             listaIdentificadoresPalavras.clear()
             listaIdentificadoresPalavras.addAll(niveis)
@@ -91,7 +92,7 @@ class MainFragment : Fragment() {
             fragmentMainBinding.tentativaBt.setBackgroundColor(Color.GRAY)
             fragmentMainBinding.reiniciarBt.isEnabled = true
 
-            verificaGameOver(sb)
+            verificaGameOver()
         }
         else {
             if(tentativas == 6) {
@@ -100,12 +101,12 @@ class MainFragment : Fragment() {
                 fragmentMainBinding.tentativaBt.setBackgroundColor(Color.GRAY)
                 fragmentMainBinding.reiniciarBt.isEnabled = true
 
-                verificaGameOver(sb)
+                verificaGameOver()
             }
         }
     }
 
-    private fun verificaGameOver(sb: StringBuilder) {
+    private fun verificaGameOver() {
         if(rodadaAtual == rodadas) {
             showAlertMessage("FIM DAS RODADAS!\n VOCÊ ACERTOU ( $vitorias de $rodadas ) palavras!\n")
             rodadaAtual = 0
