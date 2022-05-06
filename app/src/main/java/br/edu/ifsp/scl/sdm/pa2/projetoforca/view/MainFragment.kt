@@ -73,6 +73,7 @@ class MainFragment : Fragment() {
         }
 
         forcaWsViewModel.niveisMld.observe(requireActivity()) { niveis ->
+            listaIdentificadoresPalavrasJaEscolhidas.clear()
             listaIdentificadoresPalavras.clear()
             listaIdentificadoresPalavras.addAll(niveis)
             restartGame()
