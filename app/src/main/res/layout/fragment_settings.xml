@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SettingsFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Configurações"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+        />
+
+        <LinearLayout
+            android:id="@+id/llRodadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Selecione a quantidade de Rodadas:" />
+
+            <SeekBar
+                android:id="@+id/nivelSb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:min="1"
+                android:max="15" />
+
+            <TextView
+                android:id="@+id/tvSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textAlignment="textStart"
+                android:text="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDificuldade"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Selecione o nível de dificuldade:" />
+
+            <RadioGroup
+                android:id="@+id/opcoesDificuldades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/opcaoFacil"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:text="Fácil"
+                    android:checked="true"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/opcaoMedio"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:text="Médio"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/opcaoDificil"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:text="Difícil"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/salvarBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/salvar"
+            />
+
+        <Button
+            android:id="@+id/cancelarBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancelar"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

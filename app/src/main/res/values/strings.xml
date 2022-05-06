@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Jogo de Forca</string>
+    <string name="salvar">Salvar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="jogar">Jogar</string>
+    <string name="reiniciar">Reiniciar</string>
+</resources>
